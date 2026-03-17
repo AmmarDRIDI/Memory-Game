@@ -77,7 +77,7 @@ body {
 }
 
 .reset-btn {
-  width: 100%;
+  width: 50%;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   border: none;
@@ -122,8 +122,8 @@ body {
 
 /* ── Individual card ── */
 .card {
-  width: 120px;
-  height: 120px;
+  width: 133px;
+  height: 133px;
   margin: 2px;
   background: #1c1c2a;
   border-radius: 14px;
@@ -150,14 +150,80 @@ body {
   line-height: 1;
 }
 
-.win-message {
-  background: rgba(15, 23, 42, 0.95);
-  padding: 30px 50px;
-  border-radius: 15px;
+.win-dialog-paper {
+  background: radial-gradient(circle at 15% 20%,
+      rgba(129, 140, 248, 0.18),
+      transparent 40%),
+    linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(10, 14, 24, 0.96));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  overflow: hidden;
+  min-width: min(440px, calc(100vw - 32px));
+}
+
+.win-dialog-content {
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  animation: slideDown 0.5s ease-out;
+  padding: 28px 28px 16px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: slideDown 0.35s ease-out;
+}
+
+.win-badge {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f4d03f 0%, #f39c12 100%);
+  box-shadow: 0 10px 24px rgba(243, 156, 18, 0.35);
+}
+
+.win-icon {
+  color: #171717;
+}
+
+.win-title {
+  font-size: 1.9rem;
+  line-height: 1.1;
+  letter-spacing: 0.3px;
+  color: #f8fafc;
+}
+
+.win-subtitle {
+  color: #cbd5e1;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.win-dialog-actions {
+  padding: 0 24px 24px !important;
+  justify-content: center !important;
+}
+
+.win-cta {
+  width: 100%;
+  max-width: 280px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #ffffff !important;
+  border-radius: 12px !important;
+  padding: 11px 22px !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  letter-spacing: 0.2px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  box-shadow: 0 8px 20px rgba(118, 75, 162, 0.35);
+}
+
+.win-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(118, 75, 162, 0.45);
 }
 
 @keyframes slideDown {
@@ -285,6 +351,14 @@ body {
 
   .stat-value {
     font-size: 1.5rem;
+  }
+
+  .win-dialog-paper {
+    min-width: min(360px, calc(100vw - 24px));
+  }
+
+  .win-title {
+    font-size: 1.65rem;
   }
 }
 

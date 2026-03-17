@@ -1,4 +1,4 @@
-
+import CachedIcon from '@mui/icons-material/Cached';
 
 export default function GameHeader({score, moves, createInitialCards}) {
     return (
@@ -16,7 +16,16 @@ export default function GameHeader({score, moves, createInitialCards}) {
                 </div>
             </div>
 
-            <button  className="reset-btn" onClick={createInitialCards}>New Game</button>
+            <button  className="reset-btn" onClick={createInitialCards}>
+                <div style={{display: 'flex',justifyContent:"center", alignItems: 'center', gap: '6px'}}>
+                    <CachedIcon />
+                    
+                    <h4>New Game</h4>
+                </div>
+               
+                
+                
+                </button>
 
         </div>
     )
