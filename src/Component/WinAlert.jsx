@@ -5,7 +5,7 @@ import DialogContent from "@mui/material/DialogContent";
 import EmojiEventsTwoToneIcon from "@mui/icons-material/EmojiEventsTwoTone";
 
 
-export default function WinAlert({ handleClose, open }) {
+export default function WinAlert({ handleClose, open ,moves}) {
     return (
         <Dialog
             open={open}
@@ -18,6 +18,7 @@ export default function WinAlert({ handleClose, open }) {
                     backgroundColor: "#0f172a",
                     color: "#f8fafc",
                     border: "1px solid rgba(255, 255, 255, 0.12)",
+                    borderRadius: "12px",
                 },
                 "& .MuiBackdrop-root": {
                     backgroundColor: "rgba(2, 6, 23, 0.78)",
@@ -25,7 +26,7 @@ export default function WinAlert({ handleClose, open }) {
                 },
             }}
         >
-            <DialogContent className="win-dialog-content">
+            <DialogContent  className="win-dialog-content">
                 <div className="win-badge" aria-hidden="true">
                     <EmojiEventsTwoToneIcon className="win-icon" fontSize="large" />
                 </div>
@@ -33,7 +34,7 @@ export default function WinAlert({ handleClose, open }) {
                     Victory
                 </h2>
                 <p className="win-subtitle">
-                    Excellent memory! You matched all cards.
+                    Excellent memory! You matched all cards with {moves} moves.
                 </p>
             </DialogContent>
 

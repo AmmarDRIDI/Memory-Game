@@ -24,8 +24,8 @@ const cardsValues = [
 ];
 
 function initialCards() {
-  let shuffledValues = [...cardsValues].sort(() => Math.random() - 0.5);
-  const initialCards = shuffledValues.map((value, index) => ({
+  //let shuffledValues = [...cardsValues].sort(() => Math.random() - 0.5);
+  const initialCards = cardsValues.map((value, index) => ({
     id: index,
     value,
     isFlipped: false,
@@ -164,7 +164,7 @@ export default function App() {
           <Card key={card.id} card={card} onCardClick={handleCardClick} />
         ))}
       </div>
-      <WinAlert open={win} handleClose={handleClose} />
+      <WinAlert open={win} handleClose={handleClose} moves={moves} />
     </div>
   );
 }
