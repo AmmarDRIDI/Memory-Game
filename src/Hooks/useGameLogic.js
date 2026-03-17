@@ -21,8 +21,8 @@ export const useGameLogic = (cardsValues) => {
     }, []);
 
     function initialCards() {
-        //let shuffledValues = [...cardsValues].sort(() => Math.random() - 0.5);
-        const initialCards = cardsValues.map((value, index) => ({
+        let shuffledValues = [...cardsValues].sort(() => Math.random() - 0.5);
+        const initialCards = shuffledValues.map((value, index) => ({
             id: index,
             value,
             isFlipped: false,
